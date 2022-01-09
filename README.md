@@ -3,5 +3,5 @@
 
 ###### Şuanlık sadece windows dağıtımı bulunuyor
 
-Windows için kurulum dosyası
+>Windows için kurulum dosyası;
 [windows](https://github.com/tahsinkoc/crossword-game-v2).
