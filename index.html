@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulmaca-Oyunu</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+    <div class="alert-box" id="opn">
+        <div class="alert">
+            <div class="top-side">
+                MAGAZA
+            </div>
+            <div class="al-cont">
+                Mağazayı ve birçok şeyi yapmaya malesef zamanım yetmedi. <br> Ekleyemediklerim;
+                <ul>
+                    <li>Mağaza</li>
+                    <li>Level Sistemi</li>
+                    <li>Profil Resmi Ekleme, Değiştirme</li>
+                    <li>Eşzamanlı Oynanış İpuçları</li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter"></div>
+    </div>
+    <div class="box-for-user" id="bfu">
+        <i title="Çıkış yap" id="logOut" class="fas fa-sign-out-alt"></i>
+        <i title="Mağazayı Yapmaya Zamanım Yetmedi :(" id="openStore" class="fas fa-store"></i>
+    </div>
+    <iframe id="keeper" src="try.html" frameborder="0"></iframe>
+    <script>
+        function load() {
+            let load = localStorage.getItem('map')
+            let beFore = localStorage.getItem('beFore')
+            let bfu = document.getElementById('bfu')
+
+            if (load == 'Asgard' && beFore != 'true') {
+                setTimeout(() => {
+                    let doca = document.getElementById('keeper')
+                    doca.src = 'asgard.html'
+                    bfu.style.display = 'flex'
+                }, 5000);
+                clearInterval(myInterval)
+
+            } else if (load == 'Asgard' && beFore == 'true') {
+                let doca = document.getElementById('keeper')
+                doca.src = 'asgard.html'
+                bfu.style.display = 'flex'
+                clearInterval(myInterval)
+            } else if (load == 'Jotunheim' && beFore != 'true') {
+                setTimeout(() => {
+                    let doca = document.getElementById('keeper')
+                    doca.src = 'jotunheim.html'
+                    bfu.style.display = 'flex'
+                }, 5000);
+                clearInterval(myInterval)
+            } else if (load == 'Jotunheim' && beFore == 'true') {
+                let doca = document.getElementById('keeper')
+                doca.src = 'jotunheim.html'
+                bfu.style.display = 'flex'
+                clearInterval(myInterval)
+            } else if (load == 'Midgard' && beFore != 'true') {
+                setTimeout(() => {
+                    let doca = document.getElementById('keeper')
+                    doca.src = 'midgard.html'
+                    bfu.style.display = 'flex'
+                }, 5000);
+                clearInterval(myInterval)
+            } else if (load == 'Midgard' && beFore == 'true') {
+                let doca = document.getElementById('keeper')
+                doca.src = 'midgard.html'
+                bfu.style.display = 'flex'
+                clearInterval(myInterval)
+            }
+        }
+
+        console.log('inter')
+
+        load()
+        let myInterval = setInterval(load, 1000)
+        let openStore = document.getElementById('openStore')
+        let logOut = document.getElementById('logOut')
+        logOut.addEventListener('click', () => {
+
+            localStorage.clear()
+            bfu.style.display = 'none'
+            location.reload()
+        })
+        openStore.addEventListener('click', () => {
+            let opn = document.getElementById('opn')
+            opn.style.display = 'flex'
+            opn.addEventListener('click', () => {
+                opn.style.display = 'none'
+            })
+        })
+    </script>
+</body>
+
+</html>

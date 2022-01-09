@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Crossword-Game-V2</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+ 
+    </style>
+</head>
+<body onload="session()">
+    <div class="welcome-window" id="welcomeWindow">
+        <audio style="display: none;" src="./sound/Ashes.mp3" id="au" preload="auto"></audio>
+        <div class="f-welcome">
+            <button class="stop" id="stopSound" title="MUTE SOUND">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 24 24" width="50px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <div class="logo-box">
+                <div class="logo">
+                    <img src="./style/img/logo.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="chapter-box">
+                <div class="loading" style="font-size: 50px; display: none; color: #fff;" id="loading">
+                    YÜKLENİYOR...
+                </div>
+                <div class="chapter" id="asgard">
+                    <h1>ASGARD</h1>
+                    <p>
+                        Asgard evrenin ortasında ve semanın yukarısında bulunmaktadır. Burası tanrı ve tanrıçaların yurdudur. <br> <br>
+                        'TANRISAL OYUNCULARA GÖREDİR'
+                    </p>
+                </div>
+                <div class="chapter" id="jotunheim">
+                    <h1>JOTUNHEIM</h1>
+                    <p>
+                        Jotunheim Jotun olarak bilinen dev ırkının yaşadığı diyardır. <br> <br>
+                        Zorluk seviyesi rekabeti seven ancak tedbiri de elden bırakmak istemeyen oyunculara göredir.
+                    </p>
+                </div>
+                <div class="chapter" id="midgard">
+                    <h1>MIDGARD</h1>
+                    <p>
+                        Midgard aynı Asgard gibi o da iskandinav evreninin ortasında yer alır. Midgard insan diyarı olması sebebiyle bilinen bir diğer adı da bildiğimiz manada Dünya‘dır. <br> <br>
+                        Zorluk seviyesi kolaydır.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="filter"></div>
+    </div>
+    <div class="takeble-point" id="tpBox"></div>
+    <div class="xp-box"></div>
+    <div class="filter"></div>
+    <div class="question-box box">
+        <!-- <div class="que">SORU</div> -->
+        <h1 id="questionBox" style="color: #fff;"></h1>
+    </div>
+    <div class="tip-box box" id="anwBox">
+        <div class="que">CEVAP</div>
+    </div>
+    <div class="answer-box box" id="tip">
+        <div class="que">İPUCU</div>
+    </div>
+    <div class="box" style="padding: 0; display: flex; align-items: center; justify-content: center;">
+        <div class="get-letter" id="getLetter">HARF AL</div>
+        <div class="get-letter" id="predict">TAHMİN ET</div>
+    </div>
+    <script src="./script/methods.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
