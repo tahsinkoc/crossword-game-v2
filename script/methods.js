@@ -123,7 +123,7 @@ function takeblePoint(calPoint) {
     localStorage.setItem('tp', tP)
     // console.log(tP)
 }
-// localStorage.clear()
+localStorage.clear()
 
 var myStorage = window.localStorage
 
