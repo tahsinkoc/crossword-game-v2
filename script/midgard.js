@@ -28,14 +28,10 @@ fetch('https://raw.githubusercontent.com/tahsinkoc/crossword-game/main/script/mi
             if (newVal > 9) {
                 location.href = 'finish.html'
             } else {
-                let thk = document.getElementById('think')
-                thk.style.animation = 'shake .4s ease-in-out'
-                thk.style.borderColor = 'red'
-                setTimeout(() => {
-                    thk.style.animation = 'none'
-                    thk.style.animation = null
-                    thk.style.borderColor = ''
-                }, 500);
+                localStorage.removeItem('lvl')
+                localStorage.setItem('lvl', newVal)
+                llLoad()
+                location.reload()
             }
         }
         function checkAnswer(answerFromApi, answerFromUser) {
@@ -46,7 +42,14 @@ fetch('https://raw.githubusercontent.com/tahsinkoc/crossword-game/main/script/mi
                 callBox.style.left = '-100%'
                 console.log(localStorage.getItem('lvl'))
             } else {
-                alert('yanlış')
+                let thk = document.getElementById('think')
+                thk.style.animation = 'shake .4s ease-in-out'
+                thk.style.borderColor = 'red'
+                setTimeout(() => {
+                    thk.style.animation = 'none'
+                    thk.style.animation = null
+                    thk.style.borderColor = ''
+                }, 500);
             }
         }
         function level() {
@@ -68,7 +71,7 @@ fetch('https://raw.githubusercontent.com/tahsinkoc/crossword-game/main/script/mi
         }
         function writeLevel() {
             takenPoint.textContent = localStorage.getItem('xp')
-            let curr = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-drums-of-war-call-2780.mp3')
+            let curr = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-drums-of-war-call-2780.mp3")
             curr.play()
         }
         llLoad()
