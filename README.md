@@ -1,4 +1,11 @@
 # crossword-game-v2
-Hello, I made this game for  the my lesson`s final exam. This game is working on a web browsers also electron JS application.
+## Merhaba, Oyununun windows versiyonunu indirmek için aşşağıdaki linkten kurulum dosyasını indirebilirsiniz.
 
+###### Şuanlık sadece windows dağıtımı bulunuyor
 
+>Windows için kurulum dosyası
+[windows](https://github.com/tahsinkoc/crossword-game/blob/main/script/setup-file/crossword-game-v2%20Setup%201.0.0.exe?raw=true).
+
+## Tarayıcı üzerinden oynamak için
+>Oyunu tarayıcı üzerinde çalıştırmak için link
+[Tarayıcı Versiyonu](https://tahsinkoc.github.io/crossword-game-v2/).
